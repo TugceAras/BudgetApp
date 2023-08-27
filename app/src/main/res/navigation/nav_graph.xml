@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_grapg"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.tugcearas.budgetapp.ui.splash.SplashScreen"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreen_to_signinScreen"
+            app:destination="@id/signinScreen"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/signinScreen"
+        android:name="com.tugcearas.budgetapp.ui.auth.SigninScreen"
+        android:label="fragment_signin_screen"
+        tools:layout="@layout/fragment_signin_screen" >
+        <action
+            android:id="@+id/action_signinScreen_to_summaryScreen"
+            app:destination="@id/summaryScreen"
+            app:popUpTo="@id/signinScreen"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_signinScreen_to_signupScreen"
+            app:destination="@id/signupScreen"
+            app:popUpTo="@id/signinScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupScreen"
+        android:name="com.tugcearas.budgetapp.ui.auth.SignupScreen"
+        android:label="fragment_signup_screen"
+        tools:layout="@layout/fragment_signup_screen" >
+        <action
+            android:id="@+id/action_signupScreen_to_summaryScreen"
+            app:destination="@id/summaryScreen"
+            app:popUpTo="@id/signupScreen"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_signupScreen_to_signinScreen"
+            app:destination="@id/signinScreen"
+            app:popUpTo="@id/signupScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/summaryScreen"
+        android:name="com.tugcearas.budgetapp.ui.summary.SummaryScreen"
+        android:label="fragment_summary_screen"
+        tools:layout="@layout/fragment_summary_screen" >
+        <action
+            android:id="@+id/action_summaryScreen_to_incomeScreen"
+            app:destination="@id/incomeScreen"
+            app:popUpTo="@id/summaryScreen"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_summaryScreen_to_detailScreen"
+            app:destination="@id/detailScreen"
+            app:popUpTo="@id/summaryScreen"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_summaryScreen_to_signinScreen"
+            app:destination="@id/signinScreen"
+            app:popUpTo="@id/summaryScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/incomeScreen"
+        android:name="com.tugcearas.budgetapp.ui.income.IncomeScreen"
+        android:label="fragment_income_screen"
+        tools:layout="@layout/fragment_income_screen" >
+        <action
+            android:id="@+id/action_incomeScreen_to_expenseScreen"
+            app:destination="@id/expenseScreen"
+            app:popUpTo="@id/incomeScreen"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_incomeScreen_to_detailScreen"
+            app:destination="@id/detailScreen"
+            app:popUpTo="@id/incomeScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/expenseScreen"
+        android:name="com.tugcearas.budgetapp.ui.expense.ExpenseScreen"
+        android:label="fragment_expense_screen"
+        tools:layout="@layout/fragment_expense_screen" >
+        <action
+            android:id="@+id/action_expenseScreen_to_detailScreen"
+            app:destination="@id/detailScreen"
+            app:popUpTo="@id/expenseScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <dialog
+        android:id="@+id/detailScreen"
+        android:name="com.tugcearas.budgetapp.ui.budgetdetail.DetailScreen"
+        android:label="fragment_detail_screen"
+        tools:layout="@layout/fragment_detail_screen" >
+        <action
+            android:id="@+id/action_detailScreen_to_summaryScreen"
+            app:destination="@id/summaryScreen"
+            app:popUpTo="@id/detailScreen"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="budgetmodel"
+            app:argType="com.tugcearas.budgetapp.data.BudgetModel"
+            app:nullable="true"
+            android:defaultValue="@null"/>
+    </dialog>
+</navigation>

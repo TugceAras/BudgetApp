@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.BudgetApp" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/main_color</item>
+    </style>
+
+    <style name="Theme.BudgetApp" parent="Base.Theme.BudgetApp" />
+
+    <style name="RoundedFloatingActionButton" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="tint">@android:color/white</item>
+        <item name="shapeAppearanceOverlay">@style/RoundedShapeAppearanceOverlay</item>
+    </style>
+
+    <style name="RoundedShapeAppearanceOverlay">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+</resources>

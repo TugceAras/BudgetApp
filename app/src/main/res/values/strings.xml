@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">BudgetApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="budgetapp">BudgetApp</string>
+    <string name="summary">Summary</string>
+    <string name="income">Income</string>
+    <string name="expense">Expense</string>
+    <string name="fill_in_the_blank">Please fill in the blank!</string>
+    <string name="signin_successfully">Sign in successfully!</string>
+    <string name="signup_successfully">Sign up successfully!</string>
+    <string name="add_failed">Add failed!</string>
+    <string name="alert_dialog_budget_title">Budget Delete</string>
+    <string name="budget_delete_message">Do you want to delete?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="successfully_deleted">Successfully deleted!</string>
+    <string name="alert_dialog_signout_title">Sign out</string>
+    <string name="alert_dialog_signout_message">Do you want to sign out?</string>
+    <string name="alert_dialog_successfully_signout">Successfully signed out!</string>
+</resources>
