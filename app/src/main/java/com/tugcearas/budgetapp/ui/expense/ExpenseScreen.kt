@@ -95,5 +95,4 @@ class ExpenseScreen : Fragment() {
             .setNegativeButton(getString(R.string.no),null)
             .show()
     }
-
 }
